@@ -1,1 +1,0 @@
--I"C:/ti/bios_6_35_04_50/packages" -I"C:/ti/ccsv5/ccs_base" -I"C:/ti/xdctools_3_25_03_72/packages" -I"N:/workspace-ccs/basico_main/Debug/configPkg/.." -IC:/ti/ccsv5/tools/compiler/c6000_7.4.4/include -Dxdc_target_types__="ti/targets/std.h" -Dxdc_target_name__=C64P -Dxdc_cfg__header__="N:/workspace-ccs/basico_main/Debug/configPkg/package/cfg/hello_p64P.h"

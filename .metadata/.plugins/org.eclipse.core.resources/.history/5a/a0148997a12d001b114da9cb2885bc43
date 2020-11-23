@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../codigo\ optimizacion/optimizacion.c \
+../codigo\ optimizacion/utils.c 
+
+OBJS += \
+./codigo\ optimizacion/optimizacion.obj \
+./codigo\ optimizacion/utils.obj 
+
+C_DEPS += \
+./codigo\ optimizacion/optimizacion.pp \
+./codigo\ optimizacion/utils.pp 
+
+C_DEPS__QUOTED += \
+"codigo optimizacion\optimizacion.pp" \
+"codigo optimizacion\utils.pp" 
+
+OBJS__QUOTED += \
+"codigo optimizacion\optimizacion.obj" \
+"codigo optimizacion\utils.obj" 
+
+C_SRCS__QUOTED += \
+"../codigo optimizacion/optimizacion.c" \
+"../codigo optimizacion/utils.c" 
+
+
