@@ -4,13 +4,10 @@
 "C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
 making ../src/sysbios.a64P ...
 gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
+'Building file: ../utils.c'
 'Invoking: C6000 Compiler'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 48: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 94: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 251: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
+"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="utils.pp" --cmd_file="./configPkg/compiler.opt"  "../utils.c"
+'Finished building: ../utils.c'
 ' '
 'Building target: basico_main.out'
 'Invoking: C6000 Linker'
@@ -27,121 +24,6 @@ warning #10247-D: creating output section ".ppdata" without a SECTIONS specifica
 "C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
 making ../src/sysbios.a64P ...
 gmake[1]: Nothing to be done for `all'.
-'Building target: basico_main.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 
-<Linking>
-warning #10247-D: creating output section ".ppdata" without a SECTIONS specification
-'Finished building target: basico_main.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project basico_main ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-making ../src/sysbios.a64P ...
-gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 48: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 97: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 251: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
-' '
-'Building target: basico_main.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 
-<Linking>
-warning #10247-D: creating output section ".ppdata" without a SECTIONS specification
-'Finished building target: basico_main.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project basico_main ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-making ../src/sysbios.a64P ...
-gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 49: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 98: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 252: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
-' '
-'Building target: basico_main.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 
-<Linking>
-warning #10247-D: creating output section ".ppdata" without a SECTIONS specification
-'Finished building target: basico_main.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project basico_main ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-making ../src/sysbios.a64P ...
-gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
-"../Ejemplo_comienzo.c", line 49: warning #225-D: function declared implicitly
-'Invoking: C6000 Compiler'
-"../Ejemplo_comienzo.c", line 98: warning #225-D: function declared implicitly
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 252: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
-' '
-'Building target: basico_main.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 
-<Linking>
-warning #10247-D: creating output section ".ppdata" without a SECTIONS specification
-'Finished building target: basico_main.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project basico_main ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-making ../src/sysbios.a64P ...
-gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 49: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 98: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 254: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
-' '
-'Building target: basico_main.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 
-<Linking>
-warning #10247-D: creating output section ".ppdata" without a SECTIONS specification
-'Finished building target: basico_main.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project basico_main ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-making ../src/sysbios.a64P ...
-gmake[1]: Nothing to be done for `all'.
-'Building file: ../Ejemplo_comienzo.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info --preproc_with_compile --preproc_dependency="Ejemplo_comienzo.pp" --cmd_file="./configPkg/compiler.opt"  "../Ejemplo_comienzo.c"
-"../Ejemplo_comienzo.c", line 48: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 98: warning #225-D: function declared implicitly
-"../Ejemplo_comienzo.c", line 254: warning #9-D: nested comment is not allowed
-'Finished building: ../Ejemplo_comienzo.c'
-' '
 'Building target: basico_main.out'
 'Invoking: C6000 Linker'
 "C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off --gen_profile_info -z -m"basico_main.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="basico_main_linkInfo.xml" --rom_model -o "basico_main.out" -l"./configPkg/linker.cmd"  "./utils.obj" "./Ejemplo_comienzo.obj" -l"libc.a" 

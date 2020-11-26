@@ -8,7 +8,7 @@
       <boolean>true</boolean> 
      </void> 
      <void property="name"> 
-      <string>Profile all Functions for CPU Cycles</string> 
+      <string>Collect Code Coverage and Exclusive Profile Data</string> 
      </void> 
     </object> 
    </void> 
@@ -18,7 +18,7 @@
       <boolean>true</boolean> 
      </void> 
      <void property="name"> 
-      <string>Collect Code Coverage and Exclusive Profile Data</string> 
+      <string>Profile all Functions for CPU Cycles</string> 
      </void> 
     </object> 
    </void> 

@@ -79,6 +79,14 @@
 		<item value="org.eclipse.tm.terminal:3.2.1.201209191030-41031231A2A2141"/>
 		<item value="org.eclipse.wst.jsdt.feature:1.4.1.v201208171701-7H7DFg0FC7sReqSyfqesWi"/>
 	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="185" key="DIALOG_Y_ORIGIN"/>
+		<item value="381" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
 	<section name="NewWizardAction">
 	</section>
 </section>
