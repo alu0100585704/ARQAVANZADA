@@ -7,8 +7,7 @@
  * CUDA Kernel Device code
  * Incrementa cada componente del vector A con numElements elementos
  */
-__global__ void
-vectorInc(float *A, int numElements)
+__global__ void vectorInc(float *A, int numElements)
 {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
@@ -19,19 +18,6 @@ vectorInc(float *A, int numElements)
     }
 }
 
-__global__ void
-invVector(float *A, int numElements)
-{
-    int i = blockDim.x * blockIdx.x + threadIdx.x;
-
-    if (i < numElements)
-    {
-//    	if (A[i] == (numElements -1 -i)
-    			A[i] = A[(numElements-1)-i];
-
-
-    }
-}
 
 
 /**
@@ -89,8 +75,25 @@ int main(void)
     int threadsPerBlock = 1024;
     int blocksPerGrid =(numElements + threadsPerBlock - 1) / threadsPerBlock;
     printf("CUDA kernel launch with %d blocks of %d threads\n", blocksPerGrid, threadsPerBlock);
+
+    cudaEvent_t start,stop;
+    float time_ms;
+
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    cudaEventRecord(start,0);
+
     vectorInc<<<blocksPerGrid, threadsPerBlock>>>(d_A, numElements);
     err = cudaGetLastError();
+    cudaEventRecord(stop,0);
+
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&time_ms, start, stop);
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
+    printf("\nTime elapsed by kernel: %f\n", time_ms);
+
 
     if (err != cudaSuccess)
     {

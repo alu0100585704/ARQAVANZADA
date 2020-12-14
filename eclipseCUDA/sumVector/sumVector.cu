@@ -3,35 +3,26 @@
 // For the CUDA runtime routines (prefixed with "cuda_")
 #include <cuda_runtime.h>
 
+///variables globales para el device
+__device__ float d_suma;
+
 /**
  * CUDA Kernel Device code
  * Incrementa cada componente del vector A con numElements elementos
  */
 __global__ void
-vectorInc(float *A, int numElements)
+sumVector(float *A, int numElements)
 {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
     if (i < numElements)
     {
-        A[i]++;
+        ///d_suma = d_suma + A[i]; tarda 1.345504 y las sumas nunca dan lo mismo
+    	atomicAdd(&d_suma, A[i]); ///tarda 116.553  pero la suma siempre da lo mismo.
 
     }
 }
 
-__global__ void
-invVector(float *A, int numElements)
-{
-    int i = blockDim.x * blockIdx.x + threadIdx.x;
-
-    if (i < numElements)
-    {
-//    	if (A[i] == (numElements -1 -i)
-    			A[i] = A[(numElements-1)-i];
-
-
-    }
-}
 
 
 /**
@@ -59,11 +50,13 @@ int main(void)
     }
 
     // Initialize the host input vector
+    printf("\nVector Inicializado con :\n");
+
     for (int i = 0; i < numElements; ++i)
     {
-        h_A[i] = rand()/(float)RAND_MAX;
+    		h_A[i] = i;
+        	//printf("[%f]", h_A[i]);
     }
-
     // Allocate the device vector A
     float *d_A = NULL;
     err = cudaMalloc((void **)&d_A, size);
@@ -76,7 +69,7 @@ int main(void)
 
     // Copy the host input vectors A in host memory to the device input vectors in
     // device memory
-    printf("Copy input data from the host memory to the CUDA device\n");
+    printf("\nCopy input data from the host memory to the CUDA device\n");
     err = cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice);
 
     if (err != cudaSuccess)
@@ -89,8 +82,34 @@ int main(void)
     int threadsPerBlock = 1024;
     int blocksPerGrid =(numElements + threadsPerBlock - 1) / threadsPerBlock;
     printf("CUDA kernel launch with %d blocks of %d threads\n", blocksPerGrid, threadsPerBlock);
-    vectorInc<<<blocksPerGrid, threadsPerBlock>>>(d_A, numElements);
+
+    cudaEvent_t start,stop;
+    float time_ms;
+    float suma = 0;
+    cudaMemcpyToSymbol(d_suma, &suma, sizeof(float));
+
+
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    cudaEventRecord(start,0);
+
+    sumVector<<<blocksPerGrid, threadsPerBlock>>>(d_A, numElements);
     err = cudaGetLastError();
+
+    cudaEventRecord(stop,0);
+
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&time_ms, start, stop);
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
+    printf("\nTime elapsed by kernel: %f\n", time_ms);
+
+    printf("\nValor de la suma del vector : %f",suma);
+
+    cudaMemcpyFromSymbol(&suma,d_suma,sizeof(float));
+
+    printf("\nValor de la suma del vector : %f",suma);
 
     if (err != cudaSuccess)
     {

@@ -19,16 +19,32 @@ vectorInc(float *A, int numElements)
     }
 }
 
+///separo el kernel en dos, uno de lectura y el otro de escritura, para que sea seguro la rotación del vector
+///y aprovechando el paralelismo. ASí no se tiene que asignar memoria origen y destino, y aprovechamos la misma
+///del vector
+
 __global__ void
-invVector(float *A, int numElements)
+invVectorRead(float *A, int numElements)
 {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
+    float a;
 
     if (i < numElements)
-    {
-//    	if (A[i] == (numElements -1 -i)
-    			A[i] = A[(numElements-1)-i];
+    {   a = A[(numElements-1) -i];
+    	__syncthreads();
+    	A[i] = a;
+    }
 
+}
+
+__global__ void
+invVectorWrite(float *A, int numElements)
+{
+    int i = blockDim.x * blockIdx.x + threadIdx.x;
+    float a;
+    if (i < numElements)
+    {
+         a = A[(numElements-1) -i];
 
     }
 }
@@ -43,7 +59,7 @@ int main(void)
     cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
-    int numElements = 50000000;
+    int numElements = 20;
     size_t size = numElements * sizeof(float);
     printf("[Vector increment of %d elements]\n", numElements);
 
@@ -59,10 +75,14 @@ int main(void)
     }
 
     // Initialize the host input vector
+    printf("\nVector Inicializado con \n");
+
     for (int i = 0; i < numElements; ++i)
     {
-        h_A[i] = rand()/(float)RAND_MAX;
+    		h_A[i] = i;
+        	printf("[%f]", h_A[i]);
     }
+
 
     // Allocate the device vector A
     float *d_A = NULL;
@@ -76,7 +96,7 @@ int main(void)
 
     // Copy the host input vectors A in host memory to the device input vectors in
     // device memory
-    printf("Copy input data from the host memory to the CUDA device\n");
+    printf("\nCopy input data from the host memory to the CUDA device\n");
     err = cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice);
 
     if (err != cudaSuccess)
@@ -86,11 +106,27 @@ int main(void)
     }
 
     // Launch the Vector Add CUDA Kernel
-    int threadsPerBlock = 1024;
+    int threadsPerBlock = 1;
     int blocksPerGrid =(numElements + threadsPerBlock - 1) / threadsPerBlock;
-    printf("CUDA kernel launch with %d blocks of %d threads\n", blocksPerGrid, threadsPerBlock);
-    vectorInc<<<blocksPerGrid, threadsPerBlock>>>(d_A, numElements);
+    printf("\nCUDA kernel launch with %d blocks of %d threads\n", blocksPerGrid, threadsPerBlock);
+    cudaEvent_t start,stop;
+    float time_ms;
+
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    cudaEventRecord(start,0);
+
+    invVectorRead<<<blocksPerGrid, threadsPerBlock>>>(d_A, numElements);
     err = cudaGetLastError();
+
+    cudaEventRecord(stop,0);
+
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&time_ms, start, stop);
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
+    printf("\nTime elapsed by kernel: %f\n", time_ms);
 
     if (err != cudaSuccess)
     {
@@ -109,8 +145,19 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
+    printf("\nVector invertido\n");
+    // Initialize the host input vector
+    for (int i = 0; i < numElements; ++i)
+        	printf("[%f]", h_A[i]);
 
+
+    printf("\nVector invertido desde memoria de dispositivo %p \n",d_A);
+
+    // Initialize the host input vector
+    for (int i = 0; i < numElements; ++i)
+        	printf("[%f]", d_A[i]);
     // Free device global memory
+
     err = cudaFree(d_A);
 
     if (err != cudaSuccess)
@@ -131,6 +178,6 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("Done\n");
+    printf("\nDone\n");
     return 0;
 }
