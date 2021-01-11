@@ -12,7 +12,7 @@
 
 #define N (200)
 #define M (300)
-#define I (100)
+#define I (200)
 
 static void CheckCudaErrorAux (const char *, unsigned, const char *, cudaError_t);
 #define CUDA_CHECK_RETURN(value) CheckCudaErrorAux(__FILE__,__LINE__, #value, value)
@@ -21,14 +21,38 @@ static void CheckCudaErrorAux (const char *, unsigned, const char *, cudaError_t
  * CUDA kernel that computes product matrix
  */
 
-__global__ void matMul(float *d_A, float *d_B, float *d_C,
+/*__global__ void matMul(float *d_A, float *d_B, float *d_C,
 		    unsigned d_fil, unsigned d_inner, unsigned d_col,
 		    size_t pitchA, size_t pitchB, size_t pitchC)
 {
 
 
 }
+*/
+__global__ void matMul4(float *d_A, float *d_B, float *d_C,
+    unsigned d_fil, unsigned d_inner, unsigned d_col,
+    size_t pitchA, size_t pitchB, size_t pitchC)
+{
+    //M bloques de I hilos
+    unsigned j = blockIdx.x;
+    unsigned k = threadIdx.x;
+    __shared__ float acc;
 
+    float el_b = *((float *)((char *)d_B + k * pitchB) + j); //Obtiene el elemento de B asociado a este hilo
+    for (int i = 0; i < N; i++) {
+        if (k == 0){
+            acc = 0.0;
+        }
+        __syncthreads(); //espera a que se haya inicializado
+        float el_a = *((float *)((char *)d_A + i * pitchA) + k);
+        float *rowc = (float *)((char *)d_C + i * pitchC);
+        atomicAdd(&acc, el_a * el_b); //Todos los hilos escriben ordenadamente
+        __syncthreads(); //espera a que se haya inicializado
+        if (k == 1){
+            rowc[j] = acc;
+        }
+    }
+}
 
 
 int main(void)
@@ -85,10 +109,12 @@ int main(void)
     CUDA_CHECK_RETURN(cudaMemcpy2D ( d_B, pitchB, h_B, M * sizeof(float), M * sizeof(float), I, cudaMemcpyHostToDevice ));
 
     // Launch the Matrix product CUDA Kernel
-    dim3 threadsPerBlock1(,);
-    dim3 blocksPerGrid1(,);
+    dim3 threadsPerBlock1(I);
+    dim3 blocksPerGrid1(M);
+	//int threadsPerBlock1=I;
+	//int blocksPerGrid1=M;
     //printf("CUDA kernel 1 launch with (%d, %d) blocks of (%d, %d) threads\n", blocksPerGrid1.x, blocksPerGrid1.y, threadsPerBlock1.x, threadsPerBlock1.y);
-    matMul<<<blocksPerGrid1, threadsPerBlock1>>>(d_A, d_B, d_C, N, I, M, pitchA, pitchB, pitchC);
+    matMul4<<<blocksPerGrid1, threadsPerBlock1>>>(d_A, d_B, d_C, N, I, M, pitchA, pitchB, pitchC);
     CUDA_CHECK_RETURN(cudaGetLastError());
 
     // Copy the device result matrix in device memory to the host result matrix
