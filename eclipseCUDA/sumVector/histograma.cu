@@ -22,6 +22,59 @@ if (i < numElementsV)
 	
 }
 
+
+/**
+ * CUDA Kernel Device code
+ * Calcula el histograma de un vector pasado.
+ * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
+ * con el resultado.
+ * a memorida de video.
+ */
+ __global__ void
+ histogramShared(int *V, int * H, int numElementsV, int numElementsH)
+ {
+ __shared__ int acc[8];  ///tamaño máximo del vector H.Ver si se puede optimizar para  crear en tiempo de ejecución el vector dentro del kernel.
+ ///además, no se como inicializar la variable a cero inicialmente.
+
+  int i = blockDim.x * blockIdx.x + threadIdx.x;
+
+
+ if (i < numElementsV)
+   {
+     int index = V[i] % numElementsH;
+     atomicAdd((&acc[0] + index), 1); 
+     
+     __syncthreads();    
+     atomicAdd((H + index), acc[index]); 
+   }
+   
+   
+ }
+
+/**
+ * CUDA Kernel Device code
+ * Suma por reducción de los elementos de un vector
+ */
+ __global__ void
+ sumHistogram(int * h, int blocksPerGrid) ///blocksPerGrid dice el número de bloques  que realmente habría, o sea, los reales multiplicados por 2.
+ {
+     ///blockDim equivale al tamño del histograma, ya que se creó el bloque con tantos hilos como tamaño del histograma.
+
+     int i = blockDim.x * blockIdx.x + threadIdx.x; ///posicion dentro del vector del histograma.
+     int j = (blocksPerGrid -1 - blockIdx.x) * blockDim.x + threadIdx.x; ///valor  que voy a sumar dentro del histograma  que le corresponde. 
+     ///O sea, el primer bloque(equivalente al tamaño  de elementos del histograma) se sumará con el último, el segundo, con el penúltimo.....
+
+    h[i] = h[i] + h[j];
+    
+
+ /*if (i < numElementsV)
+   {	
+     int index = (V[i] % numElementsH) + (blockIdx.x * numElementsH); ///me posiciono en histograma asociado a este bloque y en la posición correspondiente
+     atomicAdd((H +index), 1); 
+   }
+   */  
+ }
+
 /**
  * CUDA Kernel Device code
  * Calcula el histograma de un vector pasado.
@@ -37,28 +90,6 @@ histogramByBlock(int *V, int * H, int numElementsV, int numElementsH)
 if (i < numElementsV)
   {	
 	int index = (V[i] % numElementsH) + (blockIdx.x * numElementsH); ///me posiciono en histograma asociado a este bloque y en la posición correspondiente
-	atomicAdd((H +index), 1); 
-  }
-	
-}
-
-/**
- * CUDA Kernel Device code
- * Calcula el histograma de un vector pasado.
- * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
- * con el resultado.
- * a memorida de video.
- */
-__global__ void
-histogramShared(int *V, int * H, int numElementsV, int numElementsH)
-{
-__shared__ int acc[50];  ///tamaño máximo del vector H.Ver si se puede optimizar para  crear en tiempo de ejecución el vector dentro del kernel.
-
- int i = blockDim.x * blockIdx.x + threadIdx.x;
-	
-if (i < numElementsV)
-  {
-	int index = V[i] % numElementsH;
 	atomicAdd((H +index), 1); 
   }
 	
@@ -155,13 +186,26 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 	if (byBlock)	
 	{
 	    printf("\nCUDA kernel - histogramByBlock - launch with %d blocks of %d threads", blocksPerGrid, threadsPerBlock);       
-		histogramByBlock<<<blocksPerGrid, threadsPerBlock>>>(d_V, d_H, numElementsV, numElementsH);
+        histogramByBlock<<<blocksPerGrid, threadsPerBlock>>>(d_V, d_H, numElementsV, numElementsH);
+        
+        if ((blocksPerGrid % 2) !=  0) //si los bloques no son pares, 
+            printf("\nBloques impares, todavía no implementada solución, puede fallar");       
+
+        while (blocksPerGrid > 1)
+        {
+            
+            sumHistogram<<<blocksPerGrid /2 , numElementsH>>>(d_H, blocksPerGrid);
+            blocksPerGrid /= 2;
+            
+        }
+            
 
 	}
 	else
 	{
 		printf("\nCUDA kernel -histogram- launch with %d blocks of %d threads", blocksPerGrid, threadsPerBlock);       
-		histogram<<<blocksPerGrid, threadsPerBlock>>>(d_V, d_H, numElementsV, numElementsH);
+        //histogram<<<blocksPerGrid, threadsPerBlock>>>(d_V, d_H, numElementsV, numElementsH);        
+        histogramShared<<<blocksPerGrid, threadsPerBlock>>>(d_V, d_H, numElementsV, numElementsH);        
 	
 	}
     err = cudaGetLastError();
@@ -218,6 +262,7 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 return h_H;
 }
 
+
 /**
  * Calcula el histograma de un vector pasado.
  * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
@@ -239,7 +284,7 @@ int main(void)
 	cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
-    int numElementsV = 50000000;
+    int numElementsV = 33554432;
 	int numElementsH = 8;
 	int threadsPerBlock = 1024;
 	    
@@ -266,6 +311,7 @@ int main(void)
      }	
 	 
 
+     
     int * h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, false, threadsPerBlock);
 
 ///Show Vector H
@@ -277,7 +323,7 @@ int main(void)
 
 free(h_H);
 
-     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, true, threadsPerBlock);
+     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, true, threadsPerBlock);   
 
 ///Show Vector H
     printf("\nResultado Vector Histograma  :");
