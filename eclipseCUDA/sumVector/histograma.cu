@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 // For the CUDA runtime routines (prefixed with "cuda_")
 #include <cuda_runtime.h>
@@ -26,9 +27,8 @@ if (i < numElementsV)
 /**
  * CUDA Kernel Device code
  * Calcula el histograma de un vector pasado.
- * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
- * con el resultado.
- * a memorida de video.
+ * Versión directa con operaciones atómicas a memoria compartida por bloque y un solo acceso atómico final a la memoria global de la CPU, tras sincronización de los hilos
+ * con el resultado a memorida de video.
  */
  __global__ void
  histogramShared(int *V, int * H, int numElementsV, int numElementsH)
@@ -37,17 +37,25 @@ if (i < numElementsV)
  ///además, no se como inicializar la variable a cero inicialmente.
 
   int i = blockDim.x * blockIdx.x + threadIdx.x;
+   
+  if (i % blockDim.x == 0)  ///si es el hilo del principio de un bloque, me encargaré de inicializar a cero la variable contador y después de ser el hilo que escriba a memoria global de la GPU.
+    for (int j=0; j < 8; j++)
+      acc[j] = 0;
 
+     __syncthreads();    
 
  if (i < numElementsV)
    {
      int index = V[i] % numElementsH;
      atomicAdd((&acc[0] + index), 1); 
      
-     __syncthreads();    
-     atomicAdd((H + index), acc[index]); 
    }
-   
+   __syncthreads();    
+
+   if (i % blockDim.x == 0)    
+     for (int j = 0; j < numElementsH; j++)     
+        atomicAdd((H + j), acc[j]); 
+ 
    
  }
 
@@ -66,13 +74,6 @@ if (i < numElementsV)
 
     h[i] = h[i] + h[j];
     
-
- /*if (i < numElementsV)
-   {	
-     int index = (V[i] % numElementsH) + (blockIdx.x * numElementsH); ///me posiciono en histograma asociado a este bloque y en la posición correspondiente
-     atomicAdd((H +index), 1); 
-   }
-   */  
  }
 
 /**
@@ -95,6 +96,25 @@ if (i < numElementsV)
 	
 }
 
+/**
+ * CUDA Kernel Device code
+ * Calcula el histograma de un vector pasado.
+ * Versión directa con operaciones atómicas a memoria de video, pero con un histograma por bloque.
+ * Se sigue utilizando un vector H, pero su tamaño es numElementsH * número de bloques.
+ * O sea, hay un histograma de tamaño numElementsH por cada bloque y su ubicación en memoria es como vector, un histograma seguido del otro
+ */
+ __global__ void
+ histogramByBlockShared(int *V, int * H, int numElementsV, int numElementsH)
+ {
+     int i = blockDim.x * blockIdx.x + threadIdx.x;
+     
+ if (i < numElementsV)
+   {	
+     int index = (V[i] % numElementsH) + (blockIdx.x * numElementsH); ///me posiciono en histograma asociado a este bloque y en la posición correspondiente
+     atomicAdd((H +index), 1); 
+   }
+     
+ }
 /**
  * CUDA Kernel Device code
  * Calcula el histograma de un vector pasado.
@@ -265,15 +285,38 @@ return h_H;
 
 /**
  * Calcula el histograma de un vector pasado.
- * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
- * con el resultado.
- * a memorida de video.
+
  */
-/*int * calculateHistogramByCpu(int * vector, int sizeHistogram, bool byBlock)
+int * calculateHistogramByCpu(int * vector, int numElementsV, int numElementsH)
 {
-int numElementsH = 8;	
-return 
-}*/
+////Version calculo histograma por CPU.     
+
+int * h_H = (int *)malloc(numElementsH * sizeof(int));
+  
+// Verify that allocations succeeded
+if (h_H == NULL)
+{
+    fprintf(stderr, "Failed to allocate host vector Histograma!\n");
+    exit(EXIT_FAILURE);
+}
+
+unsigned t0,t1;
+
+t0 = clock();
+
+///Calculo el tiempo que tardaría si se hiciera por CPU
+   for (int i = 0; i < numElementsV; i++)
+      h_H[vector[i] % numElementsH] = h_H[vector[i] % numElementsH] +1;
+     
+ t1 = clock();
+      double time =  (double (t1-t0)/CLOCKS_PER_SEC);
+    
+  
+///Show Vector H
+printf("\nTiempo empleado en calculo por CPU :  %f segundos",time);
+
+return h_H ;
+}
 
 /**
  * Host main routine
@@ -309,17 +352,31 @@ int main(void)
 		if  (numElementsV<1025)
 			printf("\n[%d]", h_V[i]); ///solo muestro por pantalla si es menor o igual de 1024
      }	
-	 
-
      
-    int * h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, false, threadsPerBlock);
+     
+
+
+////Version calculo histograma por CPU.     
+   
+int * h_H = calculateHistogramByCpu(h_V, numElementsV, numElementsH);
+
+    
+///Show Vector H
+printf("\nResultado Vector Histograma Calculado por CPU ");
+for (int i = 0; i < numElementsH; ++i)    
+        printf("\n[%d]", h_H[i]);
+
+        
+free(h_H);
+    
+    
+    
+    h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, false, threadsPerBlock);
 
 ///Show Vector H
     printf("\nResultado Vector Histograma  :");
     for (int i = 0; i < numElementsH; ++i)    
-		 {			
 			printf("\n[%d]", h_H[i]);
-		}	
 
 free(h_H);
 
@@ -328,9 +385,7 @@ free(h_H);
 ///Show Vector H
     printf("\nResultado Vector Histograma  :");
     for (int i = 0; i < numElementsH; ++i)    
-		 {			
 			printf("\n[%d]", h_H[i]);
-		}	
 
 free(h_H);
 
