@@ -7,7 +7,7 @@
 #define NUMELEMENTSV 33554432;
 #define NUMELEMENTSH 8;
 #define THREADSPERBLOCK 1024;
-#define LOOPS 5;
+#define LOOPS 10;
 /**
  * CUDA Kernel Device code
  * Calcula el histograma de un vector pasado. 
@@ -139,10 +139,7 @@ if (i < numElementsV)
  }
 /**
  * CUDA Kernel Device code
- * Calcula el histograma de un vector pasado.
- * Versión directa con operaciones atómicas a memoria compartida por un bloque y un solo acceso atómico final, tras sincronización de los hilos
- * con el resultado.
- * a memorida de video.
+ * Calcula el histograma de un vector pasado mediante diferentes métodos.
  * Devuelve un puntero hacia el el vector del histograma ya calculado
  */
 int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, bool byBlock, int threadsPerBlock, bool shared)
@@ -402,8 +399,8 @@ int main(void)
    // printf("\nVector V Inicializado con :");
 
     for (int i = 0; i < numElementsV; ++i)    	 
-		h_V[i] = rand();  
-	 //		h_V[i] = i;
+		h_V[i] = rand() % 1000000;  ///número aleatorio entre 0 y 1000000
+	 		//h_V[i] = i;
 
      
      
@@ -415,13 +412,19 @@ int main(void)
 for (int r = 0; r < repeatLoop; r++)
 {
      h_H = calculateHistogramByCpu(h_V, numElementsV, numElementsH);
-     free(h_H);    ///la función realiza la solicitud de memoria y debemos borrarla después de utilizarla antes de volver a llamar a la función
+    
+    if (r == repeatLoop-1)  ///si es la última iteración, muestro los resultados
+    {
+         ///Show Vector H
+        printf("\nResultado Vector Histograma Calculado por CPU ");
+        for (int i = 0; i < numElementsH; ++i)    
+            printf("\n[%d]", h_H[i]);
+
+    } 
+      
+    free(h_H);    ///la función realiza la solicitud de memoria y debemos borrarla después de utilizarla antes de volver a llamar a la función
 }
     
-    ///Show Vector H
-    printf("\nResultado Vector Histograma Calculado por CPU ");
-    for (int i = 0; i < numElementsH; ++i)    
-            printf("\n[%d]", h_H[i]);
                     
     
 
@@ -434,12 +437,16 @@ for (int r = 0; r < repeatLoop; r++)
 for (int r = 0; r < repeatLoop; r++)
 {   
     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, false, threadsPerBlock,false);
+    if (r == repeatLoop-1)  ///si es la última iteración, muestro los resultados
+    {
+         ///Show Vector H         
+        printf("\nResultado Vector Histograma versión Sin bloque y Sin memoria compartida :");        
+        for (int i = 0; i < numElementsH; ++i)    
+            printf("\n[%d]", h_H[i]);
+
+    } 
     free(h_H);
 }
-///Show Vector H
-    printf("\nResultado Vector Histograma versión Sin bloque y Sin memoria compartida :");
-    for (int i = 0; i < numElementsH; ++i)    
-			printf("\n[%d]", h_H[i]);
 
 
 //*******************************************************************************************************************************   
@@ -453,13 +460,18 @@ for (int r = 0; r < repeatLoop; r++)
 for (int r = 0; r < repeatLoop; r++)
 {   
     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, false, threadsPerBlock,true);
+
+    if (r == repeatLoop-1)  ///si es la última iteración, muestro los resultados
+    {
+         ///Show Vector H                 
+        printf("\nResultado Vector Histograma Versión Sin bloque y Memroria compartida :");
+        for (int i = 0; i < numElementsH; ++i)    
+            printf("\n[%d]", h_H[i]);
+
+    } 
+
     free(h_H);
 }
-///Show Vector H
-    printf("\nResultado Vector Histograma Versión Sin bloque y Memroria compartida :");
-    for (int i = 0; i < numElementsH; ++i)    
-			printf("\n[%d]", h_H[i]);
-
 
 
 //*******************************************************************************************************************************   
@@ -478,13 +490,16 @@ for (int r = 0; r < repeatLoop; r++)
 for (int r = 0; r < repeatLoop; r++)
 {   
     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, true, threadsPerBlock,false);   
+    if (r == repeatLoop-1)  ///si es la última iteración, muestro los resultados
+    {
+         ///Show Vector H                 
+         printf("\nResultado Vector Histograma Con bloques y Sin Memoria Compartida :");        
+        for (int i = 0; i < numElementsH; ++i)    
+            printf("\n[%d]", h_H[i]);
+
+    } 
     free(h_H);
 }
-
-///Show Vector H
-    printf("\nResultado Vector Histograma Con bloques y Sin Memoria Compartida :");
-    for (int i = 0; i < numElementsH; ++i)    
-			printf("\n[%d]", h_H[i]);
 
 
 
@@ -501,16 +516,17 @@ for (int r = 0; r < repeatLoop; r++)
 for (int r = 0; r < repeatLoop; r++)
 {   
     h_H = calculateHistogramByGpu(h_V, numElementsV, numElementsH, true, threadsPerBlock,true);   
+    if (r == repeatLoop-1)  ///si es la última iteración, muestro los resultados
+    {
+         ///Show Vector H                          
+         printf("\nResultado Vector Histograma Con bloques y Memoria Compartida :");
+        for (int i = 0; i < numElementsH; ++i)    
+            printf("\n[%d]", h_H[i]);
+
+    } 
     free(h_H);
 
 }
-
-///Show Vector H
-    printf("\nResultado Vector Histograma Con bloques y Memoria Compartida :");
-    for (int i = 0; i < numElementsH; ++i)    
-			printf("\n[%d]", h_H[i]);
-
-
 
     // Free host memory
     free(h_V);
