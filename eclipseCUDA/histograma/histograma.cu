@@ -4,6 +4,9 @@
 // For the CUDA runtime routines (prefixed with "cuda_")
 #include <cuda_runtime.h>
 
+#define NUMELEMENTSV 33554432;
+#define NUMELEMENTSH 8;
+#define THREADSPERBLOCK 1024;
 
 /**
  * CUDA Kernel Device code
@@ -202,7 +205,7 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 
     // Copy the host input vectors V in host memory to the device input vectors in
     // device memory
-    printf("\nCopy input data from the host memory vector V to the CUDA device");
+    //printf("\nCopy input data from the host memory vector V to the CUDA device");
     err = cudaMemcpy(d_V, vector, sizeV, cudaMemcpyHostToDevice);
 
     if (err != cudaSuccess)
@@ -213,7 +216,7 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 
     // Copy the host input vectors H in host memory to the device input vectors in
     // device memory
-    printf("\nCopy input data from the host memory vector H to the CUDA device");
+    //printf("\nCopy input data from the host memory vector H to the CUDA device");
     err = cudaMemcpy(d_H, h_H, sizeH, cudaMemcpyHostToDevice);
 
     if (err != cudaSuccess)
@@ -290,7 +293,7 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 	
     // Copy the device result vector V in device memory to the host result vector
     // in host memory.
-    printf("\nCopy output data from the CUDA device vector V to the host memory");
+    //printf("\nCopy output data from the CUDA device vector V to the host memory");
     err = cudaMemcpy(vector, d_V, sizeV, cudaMemcpyDeviceToHost);
 
     if (err != cudaSuccess)
@@ -302,7 +305,7 @@ int * calculateHistogramByGpu(int * vector,int numElementsV, int numElementsH, b
 
     // Copy the device result vector H in device memory to the host result vector
     // in host memory.
-    printf("\nCopy output data from the CUDA device vector H to the host memory");
+    //printf("\nCopy output data from the CUDA device vector H to the host memory");
     err = cudaMemcpy(h_H, d_H, sizeH, cudaMemcpyDeviceToHost);
 
     if (err != cudaSuccess)
@@ -379,9 +382,9 @@ int main(void)
 	cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
-    int numElementsV = 33554432;
-	int numElementsH = 8;
-	int threadsPerBlock = 1024;
+    int numElementsV = NUMELEMENTSV;
+	int numElementsH = NUMELEMENTSH;
+	int threadsPerBlock = THREADSPERBLOCK;
 	    
     printf("\nVector V de %d elementos", numElementsV);
     // Allocate the host input vector V
