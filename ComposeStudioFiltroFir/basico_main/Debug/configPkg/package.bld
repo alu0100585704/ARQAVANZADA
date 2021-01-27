@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'C:/git/ARQAVANZADA/basico_main/hello.cfg',
+        cfgScript: 'C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg',
         profile: 'debug',
         cfgHome: 'configPkg',
 });
@@ -41,7 +41,7 @@ else {
 
 var thisObj = {
     cfg:        '../hello.cfg',
-    outputPath: 'C:/git/ARQAVANZADA/basico_main/Debug/configPkg',
+    outputPath: 'C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/Debug/configPkg',
     exeName:    'hello' + suffix,
     exeIntName: 'hello' + suffix.replace('.', '_'),
     targ:       targ,

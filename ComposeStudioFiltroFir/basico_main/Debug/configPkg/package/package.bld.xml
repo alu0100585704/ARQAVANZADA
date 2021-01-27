@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/hello_p64P.c"/>
     </sources>
     <configscripts>
-        <srcFile name="C:/git/ARQAVANZADA/basico_main/hello.cfg"/>
+        <srcFile name="C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -44,7 +44,7 @@
         isPartial="false"
         xCfgScript="package/cfg/hello_p64P.cfg"
         xCfgPrefix="package/cfg/hello_p64P"
-        cfgScript="C:/git/ARQAVANZADA/basico_main/hello.cfg"
+        cfgScript="C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -56,7 +56,7 @@
         profile="debug"
         xCfgScript="package/cfg/hello_p64P.cfg"
         xCfgPrefix="package/cfg/hello_p64P"
-        cfgScript="C:/git/ARQAVANZADA/basico_main/hello.cfg"
+        cfgScript="C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg"
         cfgArgs="null"
         />
     </executables>

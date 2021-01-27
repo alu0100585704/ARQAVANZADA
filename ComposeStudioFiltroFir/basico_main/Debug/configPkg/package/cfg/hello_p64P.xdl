@@ -8,8 +8,8 @@
  * considers '-' as minus operator, not a file name character.
  */
 
--l"C:\git\ARQAVANZADA\basico_main\Debug\configPkg\package\cfg\hello_p64P.o64P"
--l"C:\git\ARQAVANZADA\basico_main\src\sysbios\sysbios.a64P"
+-l"C:\git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\Debug\configPkg\package\cfg\hello_p64P.o64P"
+-l"C:\git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\src\sysbios\sysbios.a64P"
 -l"C:\ti\xdctools_3_25_03_72\packages\ti\targets\rts6000\lib\ti.targets.rts6000.a64P"
 -l"C:\ti\xdctools_3_25_03_72\packages\ti\targets\rts6000\lib\boot.a64P"
 

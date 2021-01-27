@@ -8,9 +8,9 @@ Tool="CustomBuilder"
 Config="Executable"
 
 [Project Dependencies]
-Source="C:/git/ARQAVANZADA/basico_main/Debug/configPkg/package/configPkg.pjt"
+Source="C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/Debug/configPkg/package/configPkg.pjt"
 
-["C:/git/ARQAVANZADA/basico_main/Debug/configPkg/package/configPkg.pjt" Settings]
+["C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/Debug/configPkg/package/configPkg.pjt" Settings]
 ExcludeFromBuild=true
 
 
@@ -20,7 +20,7 @@ ExcludeFromBuild=true
 ;  directories.
 ;
 ["Compiler" Settings: "Executable"]
-Options=-i"C:/ti/bios_6_35_04_50/packages" -i"C:/ti/ccsv5/ccs_base" -i"C:/ti/xdctools_3_25_03_72/packages" -i"C:\git\ARQAVANZADA\basico_main\Debug" 
+Options=-i"C:/ti/bios_6_35_04_50/packages" -i"C:/ti/ccsv5/ccs_base" -i"C:/ti/xdctools_3_25_03_72/packages" -i"C:\git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\Debug" 
 
 [External Makefile]
 ExtMakefile=../../package.bld
@@ -32,7 +32,7 @@ ExtMakefile=../../package.bld
 [Source Files]
 Source="../../package.bld"
 Source="hello_x64P.c"
-Source="../../C:/git/ARQAVANZADA/basico_main/hello.cfg"
+Source="../../C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg"
 
 ["../../package.bld" Settings: "Executable"]
 UseCustomBuild=true
@@ -66,5 +66,5 @@ Run=Always
 ["hello_x64P.c" Settings: "Executable"]
 ExcludeFromBuild=true
 
-["../../C:/git/ARQAVANZADA/basico_main/hello.cfg" Settings: "Executable"]
+["../../C:/git/ARQAVANZADA/ComposeStudioFiltroFir/basico_main/hello.cfg" Settings: "Executable"]
 ExcludeFromBuild=true

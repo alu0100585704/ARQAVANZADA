@@ -5,7 +5,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.C64x+ CPU Cycle Accurate Simulator, Little Endian_0/TMS320C64+" value="${build_artifact:basico_main}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.C64x+ CPU Cycle Accurate Simulator, Little Endian_0/TMS320C64+" value="basico_main"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:basico_main}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.C64x+ CPU Cycle Accurate Simulator, Little Endian_0/TMS320C64+" value="C:/git\ARQAVANZADA\basico_main\Debug\basico_main.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.C64x+ CPU Cycle Accurate Simulator, Little Endian_0/TMS320C64+" value="C:/git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\Debug\basico_main.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/basico_main"/>
 </listAttribute>

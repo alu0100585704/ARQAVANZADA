@@ -436,3 +436,267 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 !ENTRY com.ti.ccstudio.debug 1 0 2020-11-24 11:13:23.840
 !MESSAGE DS_ERROR: TMS320C64+: GEL: Encountered a problem loading file: C:\git\ARQAVANZADA\basico_main\Debug\basico_main.out Could not open file
 
+!SESSION 2021-01-27 17:12:10.049 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-27 17:13:00.881
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.074
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.089
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.089
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.105
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.121
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:22.136
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-01-27 17:16:28.105
+!MESSAGE DS_ERROR: TMS320C64+: GEL: Encountered a problem loading file: C:\git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\Debug\basico_main.out Could not open file
+
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.292
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.292
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.308
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.308
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.323
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:44.339
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.339
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.354
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.354
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.370
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.370
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2021-01-27 17:16:55.385
+!MESSAGE Resource '/basico_main/.xdchelp' does not exist.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.301
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.301
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.group':
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@d8b94f),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@16bebd7),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.317
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.317
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.freeze':
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@139f67c),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@655e16),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.317
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.317
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.measureMarkDeleteAll':
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1fd42d0),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@2d6eea),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.bookMark':
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@191afbc),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1a86699),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.vertAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@d7fb56),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1b5f9b2),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.333
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.horzAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@abb390),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@99d628),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.348
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.348
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.legend':
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1762533),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1846942),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.348
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.348
+!MESSAGE Conflict for 'org.eclipse.ui.edit.findReplace':
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@838e1a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@e67227),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE Conflict for 'org.eclipse.ui.file.refresh':
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@45d181),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@3ccb1a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.filter':
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@86f8e4),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@13e7d87),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.364
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.copy':
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@b0797c),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@1f7f196),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.380
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-27 17:28:46.380
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.end':
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@126b6a9),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@a21a0b),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@15d10d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12c937c)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-01-27 19:13:05.046
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.size(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:247)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:233)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:126)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:118)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:42)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:157)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1124)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1472)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1248)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:879)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:603)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:700)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:273)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:358)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1319)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1292)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1287)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:653)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:149)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:869)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:819)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:81)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.ui 4 0 2021-01-27 20:14:00.008
+!MESSAGE Problems opening perspective 'com.ti.ccstudio.TICPerspective'

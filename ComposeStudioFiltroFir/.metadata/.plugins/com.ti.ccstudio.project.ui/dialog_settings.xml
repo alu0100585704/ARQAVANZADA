@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
-	</section>
 	<section name="CCS.ImportLegacyProjectWizard">
 		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_VAR_NAME"/>
 		<item value="false" key="AdvancedOptionsPage.USE_COMMON_ROOT"/>
 		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_PATH"/>
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
 	</section>
 	<section name="CCS.ImportCCSProjectWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
