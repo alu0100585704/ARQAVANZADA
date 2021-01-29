@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./Ejemplo_comienzo.obj" -l"libc.a" 

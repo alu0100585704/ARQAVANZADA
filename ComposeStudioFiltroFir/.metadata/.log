@@ -700,3 +700,534 @@ java.nio.channels.ClosedByInterruptException
 
 !ENTRY org.eclipse.ui 4 0 2021-01-27 20:14:00.008
 !MESSAGE Problems opening perspective 'com.ti.ccstudio.TICPerspective'
+!SESSION 2021-01-28 08:55:59.689 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 08:58:11.968
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.189
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.189
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.group':
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1efe572),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@127d066),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.235
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.235
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.freeze':
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@166fa35),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1b4c3d5),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.251
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.251
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.measureMarkDeleteAll':
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@437526),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@c038e7),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.268
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.268
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.bookMark':
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@cb8d3),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@13a654b),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.vertAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1df9b51),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@14e0ddb),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.horzAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@137b919),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@15919f5),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.284
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.legend':
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@724222),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@153cb89),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.301
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.301
+!MESSAGE Conflict for 'org.eclipse.ui.edit.findReplace':
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@aa2c3d),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@3e77e8),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.301
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.301
+!MESSAGE Conflict for 'org.eclipse.ui.file.refresh':
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@5b3f1f),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@154fb00),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.317
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.317
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.filter':
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@d056b9),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@1ed9c83),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.317
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.317
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.copy':
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@229f5a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@10bfaea),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.333
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:03:29.333
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.end':
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@276d6f),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@81d31d),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@1bb8662),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@753c22)),sourcePriority=1064960)
+!SESSION 2021-01-28 10:14:53.183 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-01-28 10:17:12.532
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.609
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.610
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-28 10:17:14.610
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY com.ti.ccstudio.debug.server 4 214294189 2021-01-28 10:17:55.645
+!MESSAGE Unexpected CCS exit detected [28/01/21 8:59]!!!
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.363
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.363
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.group':
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@103624e),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.group,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@6e464b),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.379
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.379
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.freeze':
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1b85696),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.freeze,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@13cac61),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.379
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.379
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.measureMarkDeleteAll':
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@96792b),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.measureMarkDeleteAll,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@ed258a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.394
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.394
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.bookMark':
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@52768),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.bookMark,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@5e2929),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.394
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.394
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.vertAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@147c32a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.vertAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@5e389a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.410
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.410
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.horzAxis':
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1cc6e2a),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.horzAxis,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@5498bb),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.410
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.410
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.legend':
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@1e85c43),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.legend,
+	handler=ActionHandler(org.eclipse.ui.internal.ViewPluginAction@14c4e),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.426
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.426
+!MESSAGE Conflict for 'org.eclipse.ui.edit.findReplace':
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@19a5111),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.edit.findReplace,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FindAction@406212),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.426
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.426
+!MESSAGE Conflict for 'org.eclipse.ui.file.refresh':
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@e156a5),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(com.ti.dvt.ui.internal.TreeGrid$6@c78d1),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.441
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.441
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.filter':
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@15978da),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.filter,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.FilterAction@10d611d),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.441
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.441
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.copy':
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@ccbbea),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.copy,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$1@1453981),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.457
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2021-01-28 10:40:11.457
+!MESSAGE Conflict for 'com.ti.dvt.ui.view.end':
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@26e651),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+HandlerActivation(commandId=com.ti.dvt.ui.view.end,
+	handler=ActionHandler(com.ti.dvt.ui.views.core.TablePane$2@1dad81f),
+	expression=AndExpression(ActivePartExpression(com.ti.dvt.ui.views.core.RestorableView@7d71e2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13d0fea)),sourcePriority=1064960)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-01-28 12:20:32.359
+!MESSAGE DS_ERROR: TMS320C64+: GEL: Encountered a problem loading file: C:\git\ARQAVANZADA\ComposeStudioFiltroFir\basico_main\Debug\basico_main.out Could not open file
+
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-01-28 12:53:20.048
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.size(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:247)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:233)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:126)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:118)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:42)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:157)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1124)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1472)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1248)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:879)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:603)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:700)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:273)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:358)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1319)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1292)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1287)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:653)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:149)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:869)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:819)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:81)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2021-01-29 09:47:35.260 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:48:13.598
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY org.eclipse.jface 2 0 2021-01-29 09:49:26.687
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:763)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:530)
+	at org.eclipse.ui.dialogs.FilteredTree$NotifyingTreeViewer.refresh(FilteredTree.java:1208)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1465)
+	at org.eclipse.ui.dialogs.FilteredTree$NotifyingTreeViewer.refresh(FilteredTree.java:1198)
+	at org.eclipse.jface.viewers.StructuredViewer.setComparator(StructuredViewer.java:1808)
+	at org.eclipse.rtsc.xdctools.model.ui.views.CombinedViewContentProvider.initialize(Unknown Source)
+	at org.eclipse.rtsc.xdctools.model.viewer.ModelObjectViewerContentProvider.getElements(Unknown Source)
+	at org.eclipse.jface.viewers.StructuredViewer.getRawChildren(StructuredViewer.java:1010)
+	at org.eclipse.jface.viewers.ColumnViewer.getRawChildren(ColumnViewer.java:703)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1351)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:391)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:917)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:620)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:820)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:797)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:644)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:768)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalInitializeTree(AbstractTreeViewer.java:1548)
+	at org.eclipse.jface.viewers.TreeViewer.internalInitializeTree(TreeViewer.java:833)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$5.run(AbstractTreeViewer.java:1532)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1443)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:403)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1404)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.inputChanged(AbstractTreeViewer.java:1525)
+	at org.eclipse.ui.dialogs.FilteredTree$NotifyingTreeViewer.inputChanged(FilteredTree.java:1187)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:280)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1690)
+	at org.eclipse.rtsc.xdctools.model.ui.views.AvailableModulesPage.createControl(Unknown Source)
+	at org.eclipse.rtsc.xdctools.model.ui.views.PackageView.doCreatePage(Unknown Source)
+	at org.eclipse.ui.part.PageBookView.createPage(PageBookView.java:408)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:751)
+	at org.eclipse.ui.part.PageBookView.showBootstrapPart(PageBookView.java:920)
+	at org.eclipse.ui.part.PageBookView.createPartControl(PageBookView.java:491)
+	at org.eclipse.ui.internal.ViewReference.createPartHelper(ViewReference.java:386)
+	at org.eclipse.ui.internal.ViewReference.createPart(ViewReference.java:240)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.Perspective.showView(Perspective.java:2245)
+	at org.eclipse.ui.internal.WorkbenchPage.busyShowView(WorkbenchPage.java:1145)
+	at org.eclipse.ui.internal.WorkbenchPage$20.run(WorkbenchPage.java:3925)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:3922)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:3898)
+	at org.eclipse.rtsc.xdctools.model.ui.editors.ProgramConfigurationEditor.showOutlineViews(Unknown Source)
+	at org.eclipse.rtsc.xdctools.model.ui.editors.ProgramConfigurationEditor.access$11(Unknown Source)
+	at org.eclipse.rtsc.xdctools.model.ui.editors.ProgramConfigurationEditor$2.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SESSION 2021-01-29 09:53:51.796 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 09:53:57.552
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY org.eclipse.ui 4 0 2021-01-29 10:03:50.149
+!MESSAGE Problems opening perspective 'com.ti.ccstudio.TICPerspective'
+!SESSION 2021-01-29 10:04:43.877 -----------------------------------------------
+eclipse.buildId=M20120914-1540
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE Warnings while parsing the viewer contributions from the 'org.eclipse.ui.popupMenus' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.CEditorRulerActions/org.eclipse.cdt.debug.ui.actions.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.CBreakpointPropertiesRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.internal.ui.actions.asm.EnableDisableBreakpointRulerActionDelegate'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.debug.ui', id='AUTOGEN:::org.eclipse.cdt.debug.ui.AsmEditorRulerActions/org.eclipse.cdt.debug.ui.actions.asm.RulerCreateBreakpointInteractiveAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='AUTOGEN:::org.eclipse.cdt.dsf.debug.ui.disassemblyRulerActions/org.eclipse.debug.ui.actions.RulerAddBreakpointAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-01-29 10:04:48.184
+!MESSAGE invalid keybinding: Cannot bind to an incomplete key sequence: plug-in='org.eclipse.cdt.dsf.ui', id='org.eclipse.cdt.dsf.debug.ui.disassembly.commands.rulerToggleBreakpoint'
+
+!ENTRY org.eclipse.ui 4 0 2021-01-29 10:07:02.917
+!MESSAGE Problems opening perspective 'com.ti.ccstudio.TICPerspective'
